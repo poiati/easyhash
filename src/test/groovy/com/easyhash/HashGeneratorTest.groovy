@@ -27,4 +27,14 @@ class HashGeneratorTest extends GroovyTestCase {
         assert 'b6b5ece040fd0c467cb189a284c6e7c752c747f5' == HashGenerator.sha1('frodo bags')
     }
     
+    void testNullValue() {
+        shouldFail(IllegalArgumentException) {
+            HashGenerator.md5 null
+        }
+        
+        shouldFail(IllegalArgumentException) {
+            HashGenerator.sha1 null
+        }
+    }
+    
 }

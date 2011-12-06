@@ -25,11 +25,13 @@ class HashGenerator {
     static final SHA1_LENGTH  = 40
     static final FILL_WITH = '0'
     
-    static String md5(input) {
+    static String md5(final String input) {
+        _checkInput(input)
         _convertToHexString(_getDigest(MD5, input), MD5_LENGTH)
     }
     
-    static String sha1(input) {
+    static String sha1(final String input) {
+        _checkInput(input)
         _convertToHexString(_getDigest(SHA1, input), SHA1_LENGTH)
     }
     
@@ -43,4 +45,8 @@ class HashGenerator {
         new BigInteger(1, data).toString(16).padLeft(length, FILL_WITH)
     }
     
+    private static _checkInput(input) {
+        if (input == null)
+            throw new IllegalArgumentException("Your reference is null. Can't generate the hash.")
+    }
 }
