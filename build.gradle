@@ -15,6 +15,11 @@ limitations under the License.
 */
 
 apply plugin: 'groovy'
+apply plugin: 'maven'
+
+group = 'com.easyhash'
+version = '1.0'
+artifact = 'easyhash'
 
 repositories {
     mavenCentral()
@@ -23,4 +28,31 @@ repositories {
 dependencies {
     groovy group: 'org.codehaus.groovy', name: 'groovy', version: '1.7.10'
     testCompile group: 'junit', name: 'junit', version: '4.8.2'
+}
+
+task pom << {
+  pom {
+    project {
+      name artifact
+      description 'The easiest way to generate HEX hashs in Groovy and Java'
+      url 'http://blog.paulopoiati.com'
+      licenses {
+        license {
+          name 'The Apache Software License, Version 2.0'
+          url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+          distribution 'repo'
+        }
+      }
+      scm {
+        url 'http://github.com/poiati/easyhash'
+      }
+      developers {
+        developer {
+          name 'Paulo Poiati'
+          email 'paulogpoiati@gmail.com'
+          url 'http://blog.paulopoiati.com'
+        }
+      }
+    }
+  }.writeTo("$buildDir/pom.xml")
 }
