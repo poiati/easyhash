@@ -1,6 +1,6 @@
 # Easyhash
 
-The easyhash is an utility to easy generate cryptographic hashs in it's hexadecimal form.
+The easyhash is an utility to easily generate cryptographic hashes in it's hexadecimal form.
 
 Currently two cryptographic hash function are supported:
 
@@ -41,3 +41,13 @@ There is also the HashCategory option:
         assert 'b6b5ece040fd0c467cb189a284c6e7c752c747f5' == 'frodo bags'.sha1()
     }
 
+# Build
+
+Build with Gradle (http://gradle.org/):
+
+    # gradle build
+
+# Support & Contact
+
+- Email: paulogpoiati@gmail.com
+- Twitter: http://twitter.com/poiati
