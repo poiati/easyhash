@@ -43,7 +43,7 @@ There is also the HashCategory option:
 
 # Build
 
-Build with Gradle (http://gradle.org/):
+Build with Gradle ( http://gradle.org/ ):
 
     # gradle build
 
