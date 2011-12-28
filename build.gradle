@@ -18,7 +18,7 @@ apply plugin: 'groovy'
 apply plugin: 'maven'
 apply plugin: 'signing'
 
-group = 'com.easyhash'
+group = 'com.lazythought'
 version = '1.0'
 artifact = 'easyhash'
 
