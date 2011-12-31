@@ -25,7 +25,7 @@ First, Put the easyhash jar into the classpath and then:
 
 With Groovy you can use the @Grab AST:
  
-    @Grab('com.lazythought.easyhash:easyhash:1.0')
+    @Grab('com.lazythought:easyhash:1.0')
     import static com.lazythought.easyhash.HashGenerator.*
  
     assert 'ab07acbb1e496801937adfa772424bf7' == md5('foo bar baz')
@@ -33,7 +33,7 @@ With Groovy you can use the @Grab AST:
  
 There is also the HashCategory option:
 
-    @Grab('com.lazythought.easyhash:easyhash:1.0')
+    @Grab('com.lazythought:easyhash:1.0')
     import com.lazythought.easyhash.HashCategory
  
     use(HashCategory) {
